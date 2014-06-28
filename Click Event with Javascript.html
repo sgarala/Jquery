@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Check JQuery Local or from web.</title>
+
+        <link href="site.css" rel="stylesheet" />
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    </head>
+    <body>
+        <div id="divContant">
+		
+            <input id="btnClick" type="button" value="Submit" />
+        </div>
+    </body>
+      <script type="text/javascript" >
+          var button = document.getElementById('btnClick');
+          //If it is support add event listener then the browser is after IE8 version.
+          if (document.addEventListener) {
+              button.addEventListener('click', function() {
+                  alert('Clicked event call');
+              },false);
+          } else {
+              button.attachEvent('onclick', function() { alert('Button Clicked in IE.'); });
+          }
+        </script>
+</html>
