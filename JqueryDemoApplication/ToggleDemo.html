@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="site.css"/>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable tr').toggle(function () {
+                    alert('aa');
+                //$(this).css('background-color', 'Green');
+            }
+            , function () {
+                alert('aa');
+
+//                $(this).css('background-color', 'yellow');
+            }
+            , function () {
+                alert('aa');
+//                $(this).css('background-color', 'red');
+            },
+            function () {
+                alert('aa');
+//                $(this).css('background-color', 'White');
+            }
+            );
+        });
+    </script>
+</head>
+    <body>
+        <table id="myTable">
+            <tr>
+                <td>
+                    Sachin
+                </td>
+                <td>
+                    Garala
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    Mahatma
+                </td>
+                 <td>
+                   Gandhi
+                </td>
+            </tr>
+        </table>
+        <div id="mainDiv">
+            <span> </span>
+        </div>
+    </body>
+</html>

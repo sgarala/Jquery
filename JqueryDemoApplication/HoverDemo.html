@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="site.css"/>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mainDiv').hover(function() {
+                $(this).toggleClass('Highlight');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mainDiv">
+        Hello, please mouse over here
+    </div>
+</body>
+</html>
