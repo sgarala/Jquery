@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change Event In dropdown in jquery.</title>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#selectCountry').change(function() {
+                alert($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <select id="selectCountry">
+        <option value="Ind">India</option>
+        <option value="USA">USA</option>
+    </select>
+</body>
+</html>

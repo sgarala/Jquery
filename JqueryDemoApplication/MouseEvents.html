@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="site.css"/>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#mainDiv').mouseenter(function() {
+                $(this).toggleClass('Highlight');
+            }).mouseleave(function() {
+                $(this).toggleClass('Highlight');
+            }).mouse;
+        });
+    </script>
+</head>
+<body>
+    <div id="mainDiv">
+        <span>Hello, please mouse over here.</span>
+    </div>
+</body>
+</html>

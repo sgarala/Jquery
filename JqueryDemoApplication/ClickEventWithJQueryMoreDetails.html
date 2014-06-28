@@ -2,8 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Click event with JQuery More Details</title>
-</head>
-<body>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            BindOkButtonClickEvent();
+        });
 
-</body>
+        function BindOkButtonClickEvent() {
+            $('#btnOk').click(function() {
+                var firstNameText = $('#firstName').val();
+                var lastNameText = $('#lastName').val();
+                $('#outputDiv').text(firstNameText + ' ' + lastNameText);
+            });
+        }
+    </script>
+</head>
+    <body>
+        <div>
+            <span>First Name:</span>
+            <input type="text" id="firstName"/>
+        </div>
+        <div>
+            <span>Last Name:</span>
+            <input type="text" id="lastName"/>
+        </div>
+        <div>
+            <input type="button" id="btnOk" value="Ok"/>
+        </div>
+        <div id="outputDiv">
+        </div>
+    </body>
 </html>
