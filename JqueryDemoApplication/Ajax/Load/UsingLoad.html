@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Load</title>
+    <script src="../../jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#LoadFullHtml').click(function () {
+                $('#OutputDiv').load('../HelpDetails.html');
+            });
+            $('#LoadJquryHelpFromHtmlPage').click(function () {
+                $('#OutputDiv').load('../HelpDetails.html #JqueryHelp');
+            });
+            $('#LoadJavaScriptHelpFromHtmlPage').click(function () {
+                $('#OutputDiv').load('../HelpDetails.html #JavaScriptHelp');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="LoadFullHtml">Load Full Help</button>
+    <button id="LoadJquryHelpFromHtmlPage">Load Only JQuey Help</button>
+    <button id="LoadJavaScriptHelpFromHtmlPage">Load Only Javascript Help</button>
+    
+    <div id="OutputDiv">
+        
+    </div>
+</body>
+</html>

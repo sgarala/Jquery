@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Load</title>
+    <script src="../../jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#LoadFullHtml').click(function () {
+                //xhr = XML http request
+                $.post('../GetEmployeeJson.aspx', { Id: 2 }, function (data) {
+                    $("#OutputDiv").html(data.Id + ' - ' + data.FirstName + ' ' + data.LastName);
+                });
+            });
+        });
+    </script>
+</head>
+    <body>
+        <button id="LoadFullHtml">Load Dummy Data</button>
+        <div id="OutputDiv">
+        
+        </div>
+    </body>
+</html>

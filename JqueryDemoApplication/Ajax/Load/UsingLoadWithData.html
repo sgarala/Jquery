@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Load</title>
+    <script src="../../jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#LoadFullHtml').click(function () {
+                //xhr = XML http request
+                $('#OutputDiv').load('../DummyData.aspx', { PageSize: $("#selectRowNo").val() });
+            });
+        });
+    </script>
+</head>
+    <body>
+        <select id="selectRowNo">
+            <option selected="true" value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+        </select>
+        <button id="LoadFullHtml">Load Dummy Data</button>
+        <div id="OutputDiv">
+        
+        </div>
+    </body>
+</html>
