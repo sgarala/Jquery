@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create Div Element in Jquery.</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <link href="../site.css" rel="stylesheet" />
+</head>
+    <body>
+          <input id="btnAddNewDiv" type="button" value="Add new Div" />
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnAddNewDiv').click(function () {
+                $('<div/>', {
+                        'class': "Highlight",
+                        html: '<b> Hello... </b>'
+                    }
+                ).appendTo('body');
+            });
+        });
+    </script>
+</html>

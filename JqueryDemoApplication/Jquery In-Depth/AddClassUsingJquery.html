@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Class Using Jqery</title>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <link href="../site.css" rel="stylesheet" />
+</head>
+    <body>
+        <div id="outputDiv">This Page is used for add class using this and jquery.</div>
+        <input id="btnClickJquery" type="button" value="Add Via Jquery" />
+        <input id="btnClick" type="button" value="Add via Object" />
+        <input id="btnTrigger" value="Trigger example" type="button"/>
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btnClick').click(function() {
+                this.className += " Highlight";
+            });
+            $('#btnClickJquery').click(function() {
+                $('#outputDiv').addClass('Highlight');
+            });
+            $('#btnTrigger').click(function() {
+                $('#btnClick').trigger('click');
+                $('#btnClickJquery').trigger('click');
+            });
+        });
+        
+    </script>
+</html>
