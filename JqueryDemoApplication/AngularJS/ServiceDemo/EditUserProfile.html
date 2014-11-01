@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="demoApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="../../jquery-1.9.0.min.js"></script>
+    <script src="MD5.js"></script>
+    <script src="Controller/EditUserProfile.js"></script>
+    <script src="Service/EditUserProfileService.js"></script>
+</head>
+    <body data-ng-controller="EditUserProfile">
+        Enter your Gravtar Email Address :  <input type="email" data-ng-model="Email" required/>
+        <span style="color: red" ng-show="Email.$dirty && Email.$invalid">
+            <span ng-show="Email.$error.required" >Email Address Required</span>
+        </span>
+        <span>{{Email}}</span>
+        <div>
+            <img src="{{gravatar(Email)}}"/>
+        </div>
+        
+    </body>
+</html>

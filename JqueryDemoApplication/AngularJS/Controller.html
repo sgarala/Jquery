@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<body>
+    <div class="Container" data-ng-controller="SimpleController">
+        <h3>Looping with Ng-Repeat directive</h3>
+        Name: <input type="text" data-ng-model="search.name" /> <br />
+        <input type="checkbox" data-ng-model="strict"  /> Strict Search
+        <ul>
+            <li data-ng-repeat="cust in Customers|filter:search:strict|orderBy:'city'">{{cust.name | uppercase}} - {{cust.city}}</li>
+        </ul>
+    </div>
+    <script>
+        function SimpleController($scope)
+        {
+            $scope.Customers = [{ name: 'sachin', city: 'junagadh' },
+                { name: 'suraj', city: 'bhayavadar' },
+                { name: 'Mehul', city: 'junagadh' },
+                { name: 'radhika', city: 'Bhayavadar' }];
+        }
+    </script>
+</body>
+</html>

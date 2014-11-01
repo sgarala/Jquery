@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<body>
+    <div class="Container" data-ng-init="names=['sachin','sameer','radhu','nandani','pratik','suraj']">
+       <h3>Looping with Ng-Repeat directive</h3>
+        <ul>
+            <li data-ng-repeat="name in names">{{name}}</li>
+        </ul>
+    </div>
+</body>
+</html>

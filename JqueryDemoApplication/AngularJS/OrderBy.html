@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<body>
+    <div class="Container" data-ng-init="customers=[{name:'sachin',city:'junagadh'},{name:'suraj',city:'bhayavadar'},{name:'Mehul',city:'junagadh'},{name:'radhika',city:'Bhayavadar'}]">
+        <h3>Looping with Ng-Repeat directive</h3>
+        <ul>
+            <li data-ng-repeat="cust in customers|orderBy:'name'">{{cust.name | uppercase}} - {{cust.city}}</li>
+        </ul>
+    </div>
+</body>
+</html>
